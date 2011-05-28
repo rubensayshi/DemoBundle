@@ -1,0 +1,8 @@
+demo_do:
+    pattern:  /demo/do
+    defaults: { _controller: DemoBundle:Demo:do }
+    
+demo_form:
+    pattern:  /demo/form
+    defaults: { _controller: DemoBundle:Demo:form }
+    

@@ -1,0 +1,9 @@
+<form action="#" method="post" {{ form_enctype(form) }}>
+
+	{{ form_row(form.name) }}	
+	{{ form_rest(form.comments) }}
+	{{ form_rest(form) }}
+	
+	<input type="submit" />
+
+</form>

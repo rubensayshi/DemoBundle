@@ -1,0 +1,22 @@
+GoGreat\DemoBundle\Entity\DemoComment:
+  type: entity
+  table: demo_comment
+  repositoryClass: GoGreat\DemoBundle\Entity\DemoCommentRepository
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    body:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false  
+  manyToOne:
+    author:
+      targetEntity: DemoUser
+      inversedBy: comments
+  lifecycleCallbacks: {  }

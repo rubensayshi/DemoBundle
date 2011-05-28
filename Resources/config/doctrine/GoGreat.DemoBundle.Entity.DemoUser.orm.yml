@@ -1,0 +1,23 @@
+GoGreat\DemoBundle\Entity\DemoUser:
+  type: entity
+  table: demo_user
+  repositoryClass: GoGreat\DemoBundle\Entity\DemoUserRepository
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    name:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false  
+  oneToMany:
+    comments:
+      targetEntity: DemoComment
+      mappedBy: author
+      cascade: ["persist"]
+  lifecycleCallbacks: {  }
